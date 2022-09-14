@@ -1,0 +1,542 @@
+*{
+    margin: 0;
+    padding: 0;
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family: sans-serif;
+    overflow-x: hidden;
+}
+
+/* Navbar */
+
+nav{
+    display: flex;
+    background-color: white;
+    justify-content: space-around;
+    padding: 20px 0;
+}
+nav .Logo-Judul img{
+    height: 40px;
+}
+nav .Judul h2{
+    color:#2c91fb;
+    letter-spacing: 2px;
+    font-family:'IBM Plex Sans Thai', sans-serif ;
+    padding-top: 4px;
+}
+
+nav ul{
+    display: flex;
+    width: 40%;
+    justify-content: space-between;
+    list-style: none;
+    padding-top: 9px;
+}
+
+nav ul li a{
+    text-decoration: none;
+    color: #2c91fb;
+    font-size: 0.8em;
+}
+
+nav ul li a:hover{
+    color: rgb(255, 240, 255);
+}
+
+/* Hamburger Menu */
+.menu-toggle{
+    display: none;
+    flex-direction: column;
+    height: 20px;
+    justify-content: space-between;
+    position: relative;
+    top: 8px;
+}
+
+.menu-toggle input{
+    position:absolute;
+    width: 35px;
+    height: 28px;
+    left: -4px;
+    top: 0;
+    opacity: 0;
+    cursor: pointer;
+    z-index: 2;
+}
+
+.menu-toggle span{
+    display: block;
+    width: 28px;
+    height: 2px;
+    background-color: black;
+    border-radius: 3px;
+    transition: all 0.5s;
+}
+
+/* Hamburger menu Animation */
+.menu-toggle span:nth-child(2){
+    transform-origin: 0 0;
+}
+
+.menu-toggle span:nth-child(4){
+    transform-origin: 0 100;
+}
+
+.menu-toggle input:checked ~ span:nth-child(2){
+    transform: rotate(45deg) translate(0, 1px);
+}
+
+.menu-toggle input:checked ~ span:nth-child(4){
+    transform: rotate(-45deg) translate(1px, -9px);
+}
+
+.menu-toggle input:checked ~ span:nth-child(3){
+    transform: scale(0);
+}
+/*Home*/
+    .Home{
+        display: flex;
+        flex-wrap: nowrap;
+        background-color:#2c91fb;
+    }
+    .Home .Tulis{
+        padding:300px 100px 100px;
+    }
+    .Home .Tulis h1{
+        display:block;
+        color: aliceblue;
+        font-size: 36px;
+    }
+    .Home .Tulis h2{
+        color: aliceblue;
+        font-size: 64px;
+        flex-wrap: wrap;
+    }
+    .Logo{
+        position: relative;
+        padding:30vh 5%;
+        width: 40%;
+        height: 40%;
+    }
+    .Logo img{
+        position: relative;
+        width: 100%;
+    }
+    .circle1{
+        width: 10px;
+        height: 10px;
+        border-style: solid;
+        border-radius: 5px;
+        color: yellow;
+        position: relative;
+        animation-name: circle1;
+        animation-iteration-count: infinite;
+        animation-duration: 10s;
+    }
+    @keyframes circle1{
+        0%    {left: -550px;top: 385px;}
+        50%   {left: -100px;top: 385px;transform: rotateZ(180deg);}
+        100%  {left: -550px;top: 385px;transform: rotateZ(360deg);}
+    }
+    .circle2{
+        width: 22px;
+        height: 23px;
+        border-style: solid;
+        border-radius: 100%;
+        color: whitesmoke;
+        position: relative;
+        animation-name: circle2;
+        animation-iteration-count: infinite;
+        animation-duration: 10s;
+    }
+    @keyframes circle2{
+        0%    {left: -4vw;top: 580px;}
+        25%   {left: -10vw;top: 330px;}
+        50%   {left: -10vw;top: 330px;}
+        100%  {left: -4vw;top: 580px;}
+    }
+    .kotak1{
+        width: 15px;
+        height: 15px;
+        border-style: solid;
+        color: whitesmoke;
+        position: relative;
+        animation-name: kotak1;
+        animation-iteration-count: infinite;
+        animation-duration: 25s;
+    }
+    @keyframes kotak1{
+        0%    {left:-10%;top: 100px;}
+        20%   {left:-20%;top: 200px;}
+        40%   {left:5%;top: 220px;}
+        60%   {left:-10%;top: 100px;}
+        80%  {left:-20%;top: 200px;}
+        100%  {transform:rotateZ(360deg);left:-10%;top: 100px;}
+    }
+    .kotak2{
+        width: 13px;
+        height: 13px;
+        border-style: solid;
+        border-radius: 100%;
+        color:blanchedalmond;
+        position: relative;
+        animation-name: kotak2;
+        animation-iteration-count: infinite;
+        animation-duration: 25s;
+    }
+    @keyframes kotak2{
+        0%    {left:-10%;top: 100px;}
+        25%   {left:-20%;top: 200px;}
+        50%   {left:0;top: 220px;}
+        75%   {left:-10%;top: 100px;}
+        100%  {left:-10%;top: 100px;}
+    }
+
+    /*Tentang*/
+    .Tentang{
+        margin-top: 100px;
+    }
+    .Profile{
+        background-image:url("Tentang/Profile-Background.jpg");
+        background-attachment: fixed;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+    .Profile h1{
+        text-align: center;
+        font-size: 36px;
+        font-family: 'Open Sans', sans-serif;
+        color:black;
+    }
+    .Profile h2{
+        text-align: center;
+        font-size: 24px;
+        font-family: 'Zen Kurenaido', sans-serif;
+    }
+    .Profile h3{
+        margin: 50px 30%;
+        text-align: center;
+        font-family: 'Zen Kurenaido', sans-serif;
+    }
+    .Kelebihan{
+        padding-bottom: 110px;
+        padding-top: 100px;
+    }
+    .Kelebihan h1{
+        text-align: center;
+        font-size: 36px;
+        font-family: 'Open Sans', sans-serif;
+        color: #2c91fb;
+    }
+    .Kelebihan-WF{
+        display:flex;
+        justify-content : space-around;
+    }
+    .Kelebihan-WF ul{
+        display: flex;
+        list-style: none;
+        width: 60%;
+        justify-content: space-between;
+    }
+    .Kelebihan-WF ul li{
+        width: 80%;
+    }
+    .Kelebihan-WF ul li h1{
+        font-size: 24px;
+        font-family: 'Zen Kurenaido', sans-serif;
+    }
+    .Kelebihan-WF ul li p{
+        text-align: justify;
+        margin: 10px 10%;
+        font-family: 'Zen Kurenaido', sans-serif;
+    }
+/*Produk*/
+.Kategori{
+    margin: 10px;
+}
+.Kategori ul{
+    display: flex;
+    flex-wrap: wrap;
+}
+.Kategori ul li{
+    list-style: none;
+    background-color: rgb(148, 204, 206);
+    border-color: white;
+    width: 150px;
+    margin:10px;
+}
+.Kategori ul li a{
+    text-decoration: none;
+    color: white;
+}
+.Kategori ul li a p{
+    padding: 10px;
+    display: inline-flex;
+}
+.Kategori ul li:hover{
+    background-color:darkcyan;
+}
+.Kategori ul ul{
+    display: none;
+    position: absolute;
+}
+.Kategori ul li:hover > ul{
+    display: block;
+}
+.Kategori ul ul li{
+    display: list-item;
+    position: relative;
+    margin: 0;
+    width: 150px;
+}
+.Kategori ul ul ul li{
+    position: relative;
+    top: -38px;
+    left: 150px;
+}
+.Kategori ul ul ul ul li{
+    position: relative;
+    top: -38px;
+    left: 150px;
+}
+li > a::after{content: '+';}
+li > a:only-child::after{
+    content: '';
+}
+.Judul-Set{
+    margin:30px;
+}
+.Judul-Set h1{
+    color:#2c91fb;
+    font-size: 60px;
+}
+.Judul-Barang{
+    margin:0 30px;
+}
+.Judul-Barang h1{
+    color: #2c91fb;
+    text-align: center;
+    font-size:50px;
+}
+.Judul-Jenis-Barang{
+    margin: 0;
+}
+.Judul-Jenis-Barang h1{
+    color: dimgrey;
+    text-align: center;
+    font-size: 30px;
+}
+.container{
+    margin:20px 30px;
+}
+.container ul{
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.container ul li{
+    background-color: white;
+    margin:4px;
+    border-color:#2c91fb;
+    border-style:solid;
+    border-width:1px;
+    border-radius:10px;
+}
+.container ul li a{
+    text-decoration: none;
+    color: #2c91fb;
+}
+.container ul li a img{
+    width: 200px;
+    height: 220px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-color:#2c91fb;
+    border-bottom-style: solid;
+    border-bottom-width:1px ;
+}
+.container ul li a h4{
+    text-align: center;
+    border-top-style:solid ;
+    border-top-color:#2c91fb ;
+    border-top-width:1px;
+    padding: 10px;
+}
+.container ul li a p{
+    text-align: center;
+    font-size: 20px;
+}
+.container ul li a:hover{
+    color: aqua;
+}
+.Barang-Set h3{
+    text-align: center;
+    color: dimgray;
+}
+.Barang-Set ul{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.Barang-Set ul li{
+    margin: 4px;
+    list-style: none;
+}
+.Barang-Set ul li img{
+    height: 200px;
+}
+.Barang-Set h3 a{
+    text-decoration: none;
+    color: skyblue;
+}
+.Barang-Set h3 a:hover{
+    color: slateblue;
+}
+.Maaf{
+    text-align: center;
+    margin: 10px 0;
+}
+.Maaf p{
+    color: dimgray;
+}
+
+/*Footer*/
+footer{
+    background-color:#262626;
+    margin: 0;
+}
+.Ikon{
+    display:flex;
+    justify-content: space-around;
+    padding: 30px 0;
+}
+.Ikon ul{
+    display: flex;
+    justify-content: space-between;
+    width: 70%;
+}
+.Ikon ul li{
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+}
+.Ikon ul li a{
+    position: absolute;
+    text-decoration: none;
+    text-align: center;
+}
+.Ikon ul li a img{
+    width: 50px;
+    height: 50px;
+}
+.Ikon ul li a h2{
+    display: flex;
+    color: white;
+    opacity:0;
+    transition: opacity 1s;
+}
+.Ikon ul li a:hover > h2{
+    opacity: 1;
+}
+.location h1{
+    padding-top: 70px;
+    padding-bottom: 10px;
+    color: white;
+    text-align: center;
+}
+.location a{
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    margin-bottom: 30px;
+}
+.location a img{
+    width: 70%;
+}
+.copyright{
+    background-color: #0e0d0d;
+    justify-content: space-around;
+}
+.copyright p{
+    color: white;
+    text-align: center;
+    padding: 5px 0;
+}
+
+/* Responsive Break point */
+
+/* ukuran Tablet */
+ @media screen and (max-width: 800px){
+     nav ul{
+         width:50%;
+     }
+     .Logo{
+        display: none;
+    }
+    .circle1{
+        display: none;
+    }
+    .circle2{
+        display: none;
+    }
+    .kotak1{
+        display: none;
+    }
+    .kotak2{
+        display: none;
+    }
+    .Profile h3{
+        margin: 50px 10%;
+    }
+    .Kelebihan-WF ul{
+        display: block;
+    }
+    .Kekurangan-WF ul{
+        display: block;
+    }
+    .Ikon ul{
+        width: 50%;
+    }
+ }
+
+ /* ukuran Mobile */
+ @media screen and (max-width: 576px){
+    .menu-toggle{
+        display: flex;
+        flex-direction: column;
+     }
+     nav ul{
+         position: absolute;
+         right: 0;
+         top: 0;
+         width: 35%;
+         height: 200px;
+         flex-direction: column;
+         background-color: white;
+         align-items: center;
+         z-index: 0;
+         transform: translateX(100%);
+         transition: all 1s;
+         opacity: 0;
+         justify-content: unset;
+         padding-top: 70px;       
+     }
+     nav ul li{
+         padding: 5px;
+         margin: 5px;
+     }
+     nav ul.slide{
+         opacity: 1;
+         transform:translateX(0);        
+     }
+    .container ul li{
+        margin-bottom: 5px;
+    }
+    .Logo{
+        display: none;
+    }
+
+ }
